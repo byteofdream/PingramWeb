@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pingram Download</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar"><div class="container row"><a class="brand" href="index.html"><span class="brand-badge"></span>Pingram</a><button class="mobile-toggle">Menu</button><nav class="nav"><a href="index.html">Home</a><a href="features.html">Features</a><a href="premium.html">Premium</a><a href="security.html">Security</a><a class="active" href="download.html">Download</a><a href="contact.html">Contact</a></nav></div></header>
+  <main class="section">
+    <div class="container grid-2">
+      <article class="card reveal">
+        <h2>Desktop Client Build</h2>
+        <ul class="download-list">
+          <li>Qt6 Widgets + Network</li>
+          <li>CMake 3.20+</li>
+          <li>C++20 compiler</li>
+        </ul>
+        <pre class="card" style="margin-top:12px; white-space:pre-wrap;">cd client
+cmake -S . -B build
+cmake --build build -j
+./build/pingram_client</pre>
+      </article>
+      <article class="card reveal">
+        <h2>Backend Run</h2>
+        <pre class="card" style="white-space:pre-wrap;">cd server
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload --host 127.0.0.1 --port 8000</pre>
+        <p class="muted">Keep backend running while testing the GUI client.</p>
+      </article>
+    </div>
+
+    <div class="container section">
+      <h2 class="reveal">Download Prebuilt Binaries</h2>
+      <p class="muted reveal">Use prebuilt packages if you do not want to build from source.</p>
+      <div class="download-grid">
+        <article class="bin-card reveal">
+          <h3>Linux (x64)</h3>
+          <p class="bin-meta">Version: v1.0.0 · SHA256: <code>e1a7...9bc2</code></p>
+          <a class="btn primary" href="https://example.com/pingram/pingram-client-linux-x64.tar.gz">Download .tar.gz</a>
+        </article>
+        <article class="bin-card reveal">
+          <h3>Windows (x64)</h3>
+          <p class="bin-meta">Version: v1.0.0 · SHA256: <code>b93f...1a7d</code></p>
+          <a class="btn primary" href="https://example.com/pingram/pingram-client-win-x64.zip">Download .zip</a>
+        </article>
+        <article class="bin-card reveal">
+          <h3>macOS (Apple Silicon)</h3>
+          <p class="bin-meta">Version: v1.0.0 · SHA256: <code>91cd...44ef</code></p>
+          <a class="btn primary" href="https://example.com/pingram/pingram-client-macos-arm64.dmg">Download .dmg</a>
+        </article>
+      </div>
+      <p class="muted" style="margin-top:12px;">Replace placeholder links with your real release artifacts (GitHub Releases, S3, or CDN).</p>
+    </div>
+  </main>
+  <footer class="footer"><div class="container">Pingram Download</div></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

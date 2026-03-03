@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pingram Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar"><div class="container row"><a class="brand" href="index.html"><span class="brand-badge"></span>Pingram</a><button class="mobile-toggle">Menu</button><nav class="nav"><a href="index.html">Home</a><a href="features.html">Features</a><a href="premium.html">Premium</a><a href="security.html">Security</a><a href="download.html">Download</a><a class="active" href="contact.html">Contact</a></nav></div></header>
+  <main class="section alt">
+    <div class="container grid-2">
+      <article class="card reveal">
+        <h2>Talk to Pingram Team</h2>
+        <p class="muted">Use this page as a product contact template.</p>
+        <p class="muted">Email: team@pingram.local<br>Discord: Pingram Community</p>
+      </article>
+      <article class="card reveal">
+        <h2>Contact Form</h2>
+        <form class="form" id="contact-form">
+          <input type="text" placeholder="Your name" required />
+          <input type="email" placeholder="Your email" required />
+          <select required>
+            <option value="">Topic</option>
+            <option>Partnership</option>
+            <option>Technical support</option>
+            <option>Premium billing</option>
+          </select>
+          <textarea placeholder="Tell us what you need" required></textarea>
+          <button class="btn primary" type="submit">Send Message</button>
+          <div class="notice" id="form-notice">Message sent. We'll contact you soon.</div>
+        </form>
+      </article>
+    </div>
+  </main>
+  <footer class="footer"><div class="container">Pingram Contact</div></footer>
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
